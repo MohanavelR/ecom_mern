@@ -29,7 +29,7 @@ app.use(express.json())
 // cookieparser
 app.use(cookieParser())
 // cors
-const allowedOrigins=['http://localhost:5174',"http://localhost:5173"]
+const allowedOrigins=['http://localhost:5174',"http://localhost:5173","https://ecom-mern-mu.vercel.app"]
 app.use(cors({
     origin:allowedOrigins,
     credentials:true
