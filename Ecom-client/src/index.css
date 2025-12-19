@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import "tailwindcss";
+
+@theme{
+    --font-all:'montserrat','sans-serif';
+    --font-input:"Nunito Sans", sans-serif;
+    --color-light-blue:#b499c7;
+    --color-azua:#00FFFF;
+}
+
+@layer base{
+    body{
+        @apply font-all font-medium
+    }
+    button{
+        @apply cursor-pointer
+    }
+    /* input{
+        @apply 
+    } */
+}
+@layer components{
+    .loader{
+        @apply border-4 w-[30px] border-s-transparent border-dotted animate-spin   border-b-transparent  border-t-blue-700 border-r-blue-700   h-[30px] rounded-full
+    }
+    .form-heading{
+        @apply text-3xl font-bold text-gray-800
+    }
+    .form-sub-heading{
+        @apply text-gray-600 mt-2
+    }
+    .form-link{
+        @apply text-sm text-blue-600 hover:text-blue-800
+    }
+    .form-outbox{
+        @apply bg-white p-8 rounded-lg shadow-lg max-w-md w-full
+    }
+    .authform-label{
+        @apply block text-sm font-medium text-gray-700 mb-1
+    }
+    .authform-input{
+        @apply w-full font-input  px-4 py-2 border border-gray-300 rounded-md outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition
+    }
+    .authform-btn{
+        @apply w-full flex justify-center py-2 px-4 disabled:bg-blue-400 cursor-pointer disabled:cursor-progress border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition
+    }
+    .form-checkout{
+        @apply h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-300 rounded
+    }
+    .hover-duration{
+        @apply transition-all duration-500
+    }
+}
