@@ -33,9 +33,9 @@ function handleaddToCart(productId,quantity,stock){
    productId,
    quantity
   }
-  let getcartItems=cartItems.items
-  if(getcartItems.length > 0){
-    let indexofcart= getcartItems.findIndex(item=>item.productId==productId)
+  let getcartItems=cartItems?.items
+  if(getcartItems?.length > 0){
+    let indexofcart= getcartItems.findIndex(item=>item?.productId==productId)
     if(indexofcart > -1){
       let getquantity=getcartItems[indexofcart].quantity
       if(getquantity + quantity > stock ){
